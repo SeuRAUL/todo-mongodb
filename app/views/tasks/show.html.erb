@@ -20,5 +20,13 @@
   <%= @task.user.email %>
 </p>
 
+<h2><%= link_to 'Comments', task_comments_path(@task) %></h2>
+<% for comment in @task.comments %>
+  <ul>
+    <li><%= comment.comment %></li>
+  </ul>
+<% end %>
+
 <%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Add comment', task_comments_path(@task) %> |
 <%= link_to 'Back', tasks_path %>

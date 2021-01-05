@@ -1,5 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+<% if current_user.nil? %>
+	<%= link_to new_user_session_path, class: 'login-button' do %>Sign in<% end %>
+<% else %>
+	
+	<%= link_to destroy_user_session_path, method: :delete do %>Log out<% end %>
+<% end %>
+
 <h1>Tasks</h1>
 
 <table>
