@@ -183,4 +183,6 @@ production:
     default:
       uri: "<%= ENV['MONGO_URL'] %>"
       options:
-        server_selection_timeout: 5
+        read:
+          mode: :primary
+        max_pool_size: 1
