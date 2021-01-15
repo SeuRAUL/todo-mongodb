@@ -1,0 +1,14 @@
+{
+  "name": "tasks",
+  "description": "App criado como teste para vaga dev",
+  "keywords": [
+    "dokku",
+    "rails",
+    "mongodb"
+  ],
+  "scripts": {
+    "dokku": {
+      "postdeploy": "bundle exec rake db:seed"
+    }
+  }
+}
